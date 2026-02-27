@@ -24,12 +24,12 @@ db.connect(err => {
   console.log('Connected to MySQL server.');
 
   // Create database if it doesn't exist
-  db.query("CREATE DATABASE IF NOT EXISTS facebook_clone", (err, result) => {
+  db.query("CREATE DATABASE IF NOT EXISTS sql12818316", (err, result) => {
     if (err) throw err;
     console.log("Database created or already exists.");
 
     // Select the database
-    db.query("USE facebook_clone", (err, result) => {
+    db.query("USE sql12818316", (err, result) => {
       if (err) throw err;
       
       // Create the users table if it doesn't exist
