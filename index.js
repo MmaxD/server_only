@@ -9,9 +9,10 @@ app.use(express.json());
 
 // 1. Create MySQL Connection (DO NOT specify the database here yet)
 const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',      // your mysql username
-  password: '1234' // your mysql password
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    port: process.env.DB_PORT
 });
 
 // 2. Connect and initialize database and tables
